@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     57688,       1303]
-NotebookOptionsPosition[     54873,       1243]
-NotebookOutlinePosition[     55326,       1260]
-CellTagsIndexPosition[     55283,       1257]
+NotebookDataLength[     58818,       1321]
+NotebookOptionsPosition[     55878,       1259]
+NotebookOutlinePosition[     56361,       1277]
+CellTagsIndexPosition[     56318,       1274]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -141,53 +141,57 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"trainVelocity", " ", "=", " ", 
      RowBox[{"72", " ", "*", " ", 
-      RowBox[{"1000", " ", "/", " ", "3600"}]}]}], " ", ";", 
-    RowBox[{"(*", " ", 
+      RowBox[{"1000", " ", "/", " ", "3600"}]}]}], " ", ";"}], 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"velocity", " ", "of", " ", "the", " ", "train", " ", "in", " ", 
+      RowBox[{"m", "/", "s"}]}], " ", "-", " ", 
      RowBox[{
-      RowBox[{"velocity", " ", "of", " ", "the", " ", "train", " ", "in", " ", 
-       RowBox[{"m", "/", "s"}]}], " ", "-", " ", 
-      RowBox[{
-      "we", " ", "convert", " ", "immediately", " ", "to", " ", "simplify", 
-       " ", 
-       RowBox[{"solution", "'"}], "s", " ", "expressions"}]}], " ", "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"trainDistance", " ", "=", " ", "600"}], ";", " ", 
-    RowBox[{"(*", " ", 
-     RowBox[{
-     "distance", " ", "from", " ", "the", " ", "head", " ", "of", " ", "the", 
-      " ", "train", " ", "to", " ", "the", " ", "crossing"}], " ", "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"carDistance", " ", "=", " ", "700"}], " ", ";", 
-    RowBox[{"(*", " ", 
-     RowBox[{
-     "distance", " ", "from", " ", "the", " ", "car", " ", "to", " ", "the", 
+     "we", " ", "convert", " ", "immediately", " ", "to", " ", "simplify", 
       " ", 
-      RowBox[{"crossing", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
-    RowBox[{"Clear", "[", "carVelocity", "]"}], ";", " ", 
-    RowBox[{"(*", " ", 
-     RowBox[{"velocity", " ", "of", " ", "the", " ", "car"}], " ", "*)"}], 
-    " ", 
-    RowBox[{"(*", " ", 
+      RowBox[{"solution", "'"}], "s", " ", "expressions"}]}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"trainDistance", " ", "=", " ", "600"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "distance", " ", "from", " ", "the", " ", "head", " ", "of", " ", "the", 
+     " ", "train", " ", "to", " ", "the", " ", "crossing"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"carDistance", " ", "=", " ", "700"}], " ", ";"}], 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "distance", " ", "from", " ", "the", " ", "car", " ", "to", " ", "the", 
+     " ", 
+     RowBox[{"crossing", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Clear", "[", "carVelocity", "]"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{"velocity", " ", "of", " ", "the", " ", "car"}], " ", "*)"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
      RowBox[{
-      RowBox[{
-       RowBox[{"Clear", "[", "]"}], " ", "is", " ", "used", " ", "to", " ", 
-       "make", " ", "sure", " ", "this", " ", "variable", " ", "is", " ", 
-       "empty"}], ",", " ", 
-      RowBox[{
-      "not", " ", "a", " ", "number", " ", "from", " ", "any", " ", "other", 
-       " ", "part", " ", "of", " ", "the", " ", "sultion"}]}], " ", "*)"}], 
-    "\[IndentingNewLine]", 
-    RowBox[{"Clear", "[", "time", "]"}], ";", " ", 
-    RowBox[{"(*", " ", 
+      RowBox[{"Clear", "[", "]"}], " ", "is", " ", "used", " ", "to", " ", 
+      "make", " ", "sure", " ", "this", " ", "variable", " ", "is", " ", 
+      "empty"}], ",", " ", 
      RowBox[{
-     "time", " ", "passed", " ", "from", " ", "initial", " ", "position"}], 
-     " ", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-    RowBox[{"(*", " ", 
-     RowBox[{"x", " ", "=", " ", 
-      RowBox[{"x0", " ", "+", " ", 
-       RowBox[{
-        SubscriptBox["v", "x"], " ", "*", " ", "t"}]}]}], " ", "*)"}], 
-    "\[IndentingNewLine]", 
+     "not", " ", "a", " ", "number", " ", "from", " ", "any", " ", "other", 
+      " ", "part", " ", "of", " ", "the", " ", "sultion"}]}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Clear", "[", "time", "]"}], ";"}], " ", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "time", " ", "passed", " ", "from", " ", "initial", " ", "position"}], 
+    " ", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"x", " ", "=", " ", 
+     RowBox[{"x0", " ", "+", " ", 
+      RowBox[{
+       SubscriptBox["v", "x"], " ", "*", " ", "t"}]}]}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"carPosition", "=", 
      RowBox[{"{", 
       RowBox[{
@@ -238,8 +242,7 @@ Cell[BoxData[
    3.8160792357199774`*^9}, {3.816079792993923*^9, 3.8160797984234314`*^9}, {
    3.816079887619162*^9, 3.8160799473828883`*^9}, {3.816080237112549*^9, 
    3.8160803155572014`*^9}, 3.8160805848316693`*^9},
- CellLabel->
-  "In[267]:=",ExpressionUUID->"5a1aeb0b-a3e8-4510-b7db-b7032a5f9da6"],
+ CellLabel->"In[2]:=",ExpressionUUID->"5a1aeb0b-a3e8-4510-b7db-b7032a5f9da6"],
 
 Cell[CellGroupData[{
 
@@ -407,9 +410,9 @@ Cell[BoxData[
    3.8160792526245346`*^9, 3.8160794915983157`*^9}, {3.8160795489043508`*^9, 
    3.8160795517503242`*^9}, {3.8160795977966957`*^9, 3.81607961361141*^9}, {
    3.8160796804056826`*^9, 3.81607969828985*^9}, 3.81607980148863*^9, {
-   3.816079969861804*^9, 3.81607999348775*^9}, 3.8160803122394753`*^9},
- CellLabel->
-  "In[270]:=",ExpressionUUID->"7ca87e27-fd5b-4415-b01b-6c1640e3e37f"],
+   3.816079969861804*^9, 3.81607999348775*^9}, 3.8160803122394753`*^9, {
+   3.8161074229092655`*^9, 3.8161074535032215`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"7ca87e27-fd5b-4415-b01b-6c1640e3e37f"],
 
 Cell[BoxData[
  TemplateBox[{
@@ -620,9 +623,9 @@ Cell[BoxData[
    3.8160042599636517`*^9}, 3.8160043221271152`*^9, 3.8160057731355953`*^9, 
    3.816005823115296*^9, {3.816006847499034*^9, 3.816006853759956*^9}, 
    3.8160074849439425`*^9, 3.8160798140184426`*^9, 3.8160804009080105`*^9, 
-   3.816080460984728*^9, 3.8160887640232677`*^9},
- CellLabel->
-  "Out[270]=",ExpressionUUID->"9af2b0a0-828b-495a-adaf-95481e94c209"]
+   3.816080460984728*^9, 3.8160887640232677`*^9, {3.8161074311091385`*^9, 
+   3.816107454893781*^9}},
+ CellLabel->"Out[11]=",ExpressionUUID->"64e4d0bd-ceef-441d-a6e0-f3df7a9ca286"]
 }, Open  ]]
 }, Open  ]],
 
@@ -641,13 +644,15 @@ Cell[BoxData[{
   RowBox[{"(*", " ", 
    RowBox[{"Clear", " ", "variable"}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"carVelocity", " ", "=", " ", 
-   RowBox[{"36", " ", "*", " ", 
-    RowBox[{"1000", " ", "/", " ", "3600"}]}]}], ";", " ", 
+  RowBox[{
+   RowBox[{"carVelocity", " ", "=", " ", 
+    RowBox[{"36", " ", "*", " ", 
+     RowBox[{"1000", " ", "/", " ", "3600"}]}]}], ";"}], " ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "Exact", " ", "velocity", " ", "from", " ", "the", " ", "conditions"}], 
-   " ", "*)"}], "\[IndentingNewLine]", 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"carPosition", "=", 
    RowBox[{"{", 
     RowBox[{
@@ -756,39 +761,33 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    SubscriptBox["v", 
-    RowBox[{"car", " "}]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    RowBox[{"car", " "}]], TraditionalForm]],ExpressionUUID->
   "7eff0f0f-184b-4500-8cc7-112da48d9512"],
  "< ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"56", "\[Union]"}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   RowBox[{"56", "\[Union]"}], TraditionalForm]],ExpressionUUID->
   "f309a0f0-79e2-4537-9087-fff59f61f2c8"],
  " ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["v", 
-    RowBox[{"car", " "}]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    RowBox[{"car", " "}]], TraditionalForm]],ExpressionUUID->
   "cf31f9f2-2154-4c80-b906-fe312519d700"],
  "> ",
  Cell[BoxData[
-  FormBox["84", TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+  FormBox["84", TraditionalForm]],ExpressionUUID->
   "d9554e46-941e-49bf-99dc-ff37dbb3eed2"],
  ".\n(b) Minimal distance between the car and the train, when ",
  Cell[BoxData[
   FormBox[
    SubscriptBox["v", 
-    RowBox[{"car", " "}]], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    RowBox[{"car", " "}]], TraditionalForm]],ExpressionUUID->
   "d52636d0-ae8f-40ad-967c-bf8ac53986dd"],
  "= 36 km/h, is: ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["d", "min"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["d", "min"], TraditionalForm]],ExpressionUUID->
   "903e9757-d933-4345-8021-6df14a3d94a4"],
  " \[EqualTilde] 224 m, achieved in time = 50 s from the initial moment."
 }], "Text",
@@ -1091,12 +1090,13 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`carDistance$$ = 
-    700, $CellContext`carVelocity$$ = 6., $CellContext`time$$ = 
-    44., $CellContext`trainDistance$$ = 600, $CellContext`trainLength$$ = 
-    300, $CellContext`trainVelocity$$ = 20, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+    7000, $CellContext`carVelocity$$ = 
+    21.200000000000003`, $CellContext`time$$ = 
+    381.7990400000002, $CellContext`trainDistance$$ = 
+    6000, $CellContext`trainLength$$ = 3000, $CellContext`trainVelocity$$ = 
+    20, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`carVelocity$$], 10, "Car Velocity [m/s]"}, 0, 100}, {{
        Hold[$CellContext`time$$], 0, "Time [s]"}, 0, 400}, {{
        Hold[$CellContext`trainLength$$], 300, "Length of train [m]"}}, {{
@@ -1105,7 +1105,7 @@ Cell[BoxData[
        Hold[$CellContext`trainVelocity$$], 20, "Train velocity [m/s]"}}, {{
        Hold[$CellContext`carDistance$$], 700, 
        "Distance from car to junction [m]"}}}, Typeset`size$$ = {
-    500., {272.09999999999997`, 278.09999999999997`}}, Typeset`update$$ = 0, 
+    450., {245.14000000000001`, 250.54}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
@@ -1168,7 +1168,7 @@ $CellContext`time$$ $CellContext`trainVelocity$$}}], \
           "Train velocity [m/s]"}}, {{$CellContext`carDistance$$, 700, 
           "Distance from car to junction [m]"}}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{889., {303., 309.}},
+     ImageSizeCache->{804., {272.8, 278.2}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1193,7 +1193,7 @@ $CellContext`time$$ $CellContext`trainVelocity$$}}], \
    3.8160875758389854`*^9, 3.816087918810883*^9, {3.8160879493098497`*^9, 
    3.816087957959878*^9}, {3.8160880510112653`*^9, 3.8160880810952716`*^9}, {
    3.816088557512265*^9, 3.8160885715112357`*^9}, {3.8160886369172344`*^9, 
-   3.8160886583892636`*^9}, 3.816088768576235*^9},
+   3.8160886583892636`*^9}, 3.816088768576235*^9, 3.8161412992737894`*^9},
  CellLabel->
   "Out[275]=",ExpressionUUID->"841198c4-33ea-4b9b-ace6-5ac75b60185e"]
 }, Open  ]]
@@ -1215,9 +1215,7 @@ represent special symbols. Also key shortcuts like ctrl + \[OpenCurlyQuote]-\
   FormBox[
    SubscriptBox["exists", 
     RowBox[{"subtext", " ", "in", " ", "this", " ", "case"}]], 
-   TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
-  "ea02fa9a-22a1-4c03-90ff-dd9ae3422915"],
+   TraditionalForm]],ExpressionUUID->"ea02fa9a-22a1-4c03-90ff-dd9ae3422915"],
  "\n3) Don\[CloseCurlyQuote]t forget to clear your variables not to get \
 confused! Even if you deleted some code with variable, but executed it, it is \
 still in the system.\n4) Internal Wolfram Mathematica Documentation is a \
@@ -1230,20 +1228,39 @@ nice layout similar to Manipulate\[CloseCurlyQuote]s one to solve this issue.\
 \n6) Conversion between km/h and m/s may be a function applied automatically \
 when needed, not hard-coded.\n7) Graph may be displayed not very well for \
 strange input. May be fixed, probably, with some additional work on ranges \
-and image size."
+and image size. "
 }], "Text",
  CellChangeTimes->{{3.8160817274420357`*^9, 3.8160818199253187`*^9}, {
   3.816082490695583*^9, 3.81608265913162*^9}, {3.8160875922879863`*^9, 
   3.8160876733149757`*^9}, {3.8160878282999544`*^9, 3.816087882720853*^9}, {
-  3.8160887074602704`*^9, 
-  3.816088750225237*^9}},ExpressionUUID->"c60aa2a8-5681-4a06-b8cc-\
-2b7d4fac805f"]
+  3.8160887074602704`*^9, 3.816088750225237*^9}, {3.8161417374224586`*^9, 
+  3.816141784855603*^9}, {3.8162407655548143`*^9, 
+  3.8162407732850666`*^9}},ExpressionUUID->"c60aa2a8-5681-4a06-b8cc-\
+2b7d4fac805f"],
+
+Cell["\<\
+Overall, my experience with Wolfram Mathematica is great. It is a powerful \
+tool to solve tasks arising not only in olympiads, as I solved, but some \
+everyday life simulations or computational tasks as well. Although I am not a \
+scientist using Mathematica for research purposes, I am sure it is a great \
+tool to model and compute anything one can imagine. Of course, one should be \
+experienced enough to use functionality of Mathematica in the most efficient \
+way, and I am not that person. However, I quite recommend trying Mathematica \
+for students and researchers who are working with computational tasks and \
+maybe want to model solutions for presentations. Mathematica is great for \
+these goals. I hope I would have some more experience with Mathematica in the \
+future.\
+\>", "Text",
+ CellChangeTimes->{{3.816240786660249*^9, 
+  3.8162410717538395`*^9}},ExpressionUUID->"627aac36-0bc4-4258-9e5e-\
+319d5df86c57"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1141.2, 580.1999999999999},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules->{"TryRealOnly" -> False},
+Magnification:>0.9 Inherited,
 FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4ac29a75-72c8-4301-bd20-e679b4e99db1"
@@ -1260,49 +1277,50 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 318, 5, 97, "Title",ExpressionUUID->"7b037506-35a9-41c2-bd7e-2b367196165d"],
-Cell[901, 29, 196, 3, 53, "Subtitle",ExpressionUUID->"c4715879-e97f-404b-9a49-38ac268f2026"],
+Cell[580, 22, 318, 5, 89, "Title",ExpressionUUID->"7b037506-35a9-41c2-bd7e-2b367196165d"],
+Cell[901, 29, 196, 3, 46, "Subtitle",ExpressionUUID->"c4715879-e97f-404b-9a49-38ac268f2026"],
 Cell[CellGroupData[{
-Cell[1122, 36, 169, 3, 67, "Section",ExpressionUUID->"90f8a0e6-056d-4ad6-9625-4f23b8a533e5"],
-Cell[1294, 41, 508, 10, 81, "Text",ExpressionUUID->"eca981f1-b634-4670-a5ea-b8d277f9f817"]
+Cell[1122, 36, 169, 3, 59, "Section",ExpressionUUID->"90f8a0e6-056d-4ad6-9625-4f23b8a533e5"],
+Cell[1294, 41, 508, 10, 72, "Text",ExpressionUUID->"eca981f1-b634-4670-a5ea-b8d277f9f817"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1839, 56, 211, 4, 67, "Section",ExpressionUUID->"df12026a-59af-4274-891d-0c0f56e28c0c"],
-Cell[2053, 62, 1460, 33, 104, "Text",ExpressionUUID->"b1432da6-095d-4128-9b80-e72f97cfd759"]
+Cell[1839, 56, 211, 4, 59, "Section",ExpressionUUID->"df12026a-59af-4274-891d-0c0f56e28c0c"],
+Cell[2053, 62, 1460, 33, 93, "Text",ExpressionUUID->"b1432da6-095d-4128-9b80-e72f97cfd759"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3550, 100, 208, 4, 67, "Section",ExpressionUUID->"efb9f386-6fb6-466f-a6a7-a40e324a991c"],
-Cell[3761, 106, 491, 9, 58, "Text",ExpressionUUID->"75e2c9c0-aeca-414c-b2f2-65db7de44877"],
+Cell[3550, 100, 208, 4, 59, "Section",ExpressionUUID->"efb9f386-6fb6-466f-a6a7-a40e324a991c"],
+Cell[3761, 106, 491, 9, 52, "Text",ExpressionUUID->"75e2c9c0-aeca-414c-b2f2-65db7de44877"],
 Cell[CellGroupData[{
-Cell[4277, 119, 215, 4, 54, "Subsection",ExpressionUUID->"b797a5e3-02b3-438e-84e8-71aeda94a621"],
-Cell[4495, 125, 4959, 116, 322, "Input",ExpressionUUID->"5a1aeb0b-a3e8-4510-b7db-b7032a5f9da6"],
+Cell[4277, 119, 215, 4, 48, "Subsection",ExpressionUUID->"b797a5e3-02b3-438e-84e8-71aeda94a621"],
+Cell[4495, 125, 4978, 119, 250, "Input",ExpressionUUID->"5a1aeb0b-a3e8-4510-b7db-b7032a5f9da6"],
 Cell[CellGroupData[{
-Cell[9479, 245, 7858, 166, 497, "Input",ExpressionUUID->"7ca87e27-fd5b-4415-b01b-6c1640e3e37f"],
-Cell[17340, 413, 9857, 211, 70, "Output",ExpressionUUID->"9af2b0a0-828b-495a-adaf-95481e94c209"]
+Cell[9498, 248, 7908, 166, 406, "Input",ExpressionUUID->"7ca87e27-fd5b-4415-b01b-6c1640e3e37f"],
+Cell[17409, 416, 9905, 211, 63, "Output",ExpressionUUID->"64e4d0bd-ceef-441d-a6e0-f3df7a9ca286"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27246, 630, 170, 3, 54, "Subsection",ExpressionUUID->"9919f3ec-36c9-49c7-9f1a-a292123c9440"],
+Cell[27363, 633, 170, 3, 48, "Subsection",ExpressionUUID->"9919f3ec-36c9-49c7-9f1a-a292123c9440"],
 Cell[CellGroupData[{
-Cell[27441, 637, 4329, 97, 224, "Input",ExpressionUUID->"0c3a41fc-3b1e-412c-a58c-783ea7be0ae5"],
-Cell[31773, 736, 311, 5, 32, "Output",ExpressionUUID->"e01d5dab-2acd-4086-8c7e-97603ae59c8d"]
+Cell[27558, 640, 4357, 99, 199, "Input",ExpressionUUID->"0c3a41fc-3b1e-412c-a58c-783ea7be0ae5"],
+Cell[31918, 741, 311, 5, 29, "Output",ExpressionUUID->"e01d5dab-2acd-4086-8c7e-97603ae59c8d"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32145, 748, 155, 3, 67, "Section",ExpressionUUID->"75bce909-8844-40f8-b6db-15030ddcc8cd"],
-Cell[32303, 753, 1521, 44, 58, "Text",ExpressionUUID->"d803148d-b82c-4360-8c13-38f17cb7a332"]
+Cell[32290, 753, 155, 3, 59, "Section",ExpressionUUID->"75bce909-8844-40f8-b6db-15030ddcc8cd"],
+Cell[32448, 758, 1323, 38, 52, "Text",ExpressionUUID->"d803148d-b82c-4360-8c13-38f17cb7a332"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33861, 802, 162, 3, 67, "Section",ExpressionUUID->"1ae577ac-524f-4a80-a4d9-46d787276c0f"],
+Cell[33808, 801, 162, 3, 59, "Section",ExpressionUUID->"1ae577ac-524f-4a80-a4d9-46d787276c0f"],
 Cell[CellGroupData[{
-Cell[34048, 809, 13107, 278, 556, "Input",ExpressionUUID->"824fe6a4-cc6d-407d-89c1-70976684b5ed"],
-Cell[47158, 1089, 5675, 108, 631, "Output",ExpressionUUID->"841198c4-33ea-4b9b-ace6-5ac75b60185e"]
+Cell[33995, 808, 13107, 278, 492, "Input",ExpressionUUID->"824fe6a4-cc6d-407d-89c1-70976684b5ed"],
+Cell[47105, 1088, 5727, 109, 568, "Output",ExpressionUUID->"841198c4-33ea-4b9b-ace6-5ac75b60185e"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[52882, 1203, 189, 3, 67, "Section",ExpressionUUID->"41185b01-25c5-4fec-8776-c07f00e7b1f2"],
-Cell[53074, 1208, 1771, 31, 196, "Text",ExpressionUUID->"c60aa2a8-5681-4a06-b8cc-2b7d4fac805f"]
+Cell[52881, 1203, 189, 3, 59, "Section",ExpressionUUID->"41185b01-25c5-4fec-8776-c07f00e7b1f2"],
+Cell[53073, 1208, 1837, 30, 177, "Text",ExpressionUUID->"c60aa2a8-5681-4a06-b8cc-2b7d4fac805f"],
+Cell[54913, 1240, 937, 15, 114, "Text",ExpressionUUID->"627aac36-0bc4-4258-9e5e-319d5df86c57"]
 }, Open  ]]
 }, Open  ]]
 }
